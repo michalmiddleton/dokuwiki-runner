@@ -7,9 +7,12 @@ orbs:
 jobs:
   build-image:
     docker:
-      # replace with your preferred image
       - image: cimg/base:stable
     steps:
+      - checkout
+      - run:
+          name: LS
+          command: ls -la
       - docker/build:
           image: mm404/dokuwiki-webserver
 
