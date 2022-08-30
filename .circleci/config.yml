@@ -1,0 +1,19 @@
+# See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+
+orbs:
+  docker: circleci/docker@1.7.0
+
+jobs:
+  build-image:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - docker/build:
+          image: mm404/dokuwiki-webserver
+
+workflows:
+  assemble-dokuwiki-image:
+    jobs:
+      - build-image
