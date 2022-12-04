@@ -27,7 +27,6 @@ jobs:
       - docker/push:
           image: mm404/dokuwiki-webserver
           tag: $TAG_NOW,latest
-
 workflows:
   version: 2
   build_and_push:
