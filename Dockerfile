@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM alpine:3.18
 
 RUN apk add --no-cache apache2 php81-apache2 php81 php81-gd php81-session php81-calendar \
 	php81-ctype php81-dom php81-exif php81-fileinfo php81-gettext php81-json \
